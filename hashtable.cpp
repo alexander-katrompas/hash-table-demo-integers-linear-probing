@@ -77,6 +77,7 @@ bool Hashtable::deleteEntry(int id) {
     for (int i = 0; i < HASHTABLESIZE && !deleted; i++) {
         if (hashtable[position] && hashtable[position] == id) {
             hashtable[position] = 0;
+            count--;
             deleted = true;
         } else {
             if (position == HASHTABLESIZE - 1) {
